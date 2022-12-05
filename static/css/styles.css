@@ -895,7 +895,12 @@ progress {
 }
 
 .time {
-  color: green
+  color: green;
+}
+
+#post_list {
+  margin: auto;
+  width: 50%;
 }
 
 @media (min-width: 576px) {
@@ -6829,6 +6834,7 @@ textarea.form-control-lg {
 
 .align-items-center {
   align-items: center !important;
+  margin: auto;
 }
 
 .align-items-baseline {
