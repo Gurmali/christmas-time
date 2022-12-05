@@ -898,6 +898,10 @@ progress {
   color: green;
 }
 
+.tree {
+  float: right;
+}
+
 #post_list {
   margin: auto;
   width: 50%;
