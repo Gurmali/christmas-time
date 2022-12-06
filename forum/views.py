@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib import messages
 from django.views import generic, View
 from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
@@ -78,4 +79,3 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
