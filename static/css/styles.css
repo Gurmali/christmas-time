@@ -902,6 +902,7 @@ progress {
   float: right;
 }
 
+
 .btn-signup {
   background-color: var(--bs-red); /* Green */
   border: none;
@@ -912,6 +913,22 @@ progress {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.btn-like {
+  color: rgb(0, 129, 6);
+  border: none;
+  background-color: white;
+}
+
+.btn-not-like {
+  color: lightgrey;
+  border: none;
+  background-color: white;
+}
+
+.no-border {
+  border: none;
 }
 
 #post_list {
