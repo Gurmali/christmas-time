@@ -902,6 +902,9 @@ progress {
   float: right;
 }
 
+.comment-like {
+  float: right;
+}
 
 .btn-signup {
   background-color: var(--bs-red); /* Green */
