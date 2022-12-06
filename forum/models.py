@@ -39,7 +39,7 @@ class Comments(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f"{self.poster} says: {self.comment}"
+        return f"{self.comment} by {self.poster}"
 
     def number_of_likes(self):
         return self.likes.count()

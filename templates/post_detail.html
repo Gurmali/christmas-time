@@ -63,7 +63,7 @@
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->
-                    {{ comment.content | linebreaks }}
+                    {{ comment.comment | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
@@ -71,7 +71,11 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                {% if user.is_authenticated %}
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    You left a comment.
+                </div>
+                
                 <h3>Leave a comment:</h3>
                 <p>Commenting as: {{ user.username }}</p>
                 <form method="post">
@@ -80,6 +84,18 @@
                     <button type="submit" class="primaryAction btn-signup">Leave comment</button>
                 </form>
 
+                {% else %}
+
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Commenting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="primaryAction btn-signup">Leave comment</button>
+                </form>
+                
+                {% endif %}
                 {% endif %}
             </div>
         </div>
